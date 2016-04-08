@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Min's Blog
 subtitle:
 description:
-author: John Doe
+author: Min
 language:
 timezone:
 
@@ -68,4 +68,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repository: git@github.com:minjing/minjing.github.io.git
+  branch: master
