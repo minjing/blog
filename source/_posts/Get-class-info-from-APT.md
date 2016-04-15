@@ -1,11 +1,14 @@
 ---
 title: 从APT中获取运行时类信息
 tags:
-    - Java
-    - APT
-    - Annotation
-Categories: Development
+  - Java
+  - APT
+  - Annotation
+categories:
+  - Development
+date: 2016-04-14 20:48:58
 ---
+
 
 ## 概述
 从JDK1.6开始提供了一个新的被称为APT(Annotation Processing Tool)的工具，使用其提供的APT我们可以通过类似数据结构的方式来访问被编译的Java的源代码。
@@ -33,6 +36,8 @@ Class[] cls = service.value();
 ...
 ```
 运行这段代码会在编译时抛出异常，因为在编译时类型信息无法直接获取，只有Native数据和String可以直接获取。
+
+<!-- more -->
 
 ## 解决方案
 如何解决该问题呢？我们需要使用APT提供的*Mirror API获取Class的相关信息。

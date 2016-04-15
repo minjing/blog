@@ -1,6 +1,8 @@
 ---
 title: 在GIT中创建一个空分支
 tags: GIT
+categories:
+  - Development
 date: 2016-04-13 15:18:50
 ---
 
