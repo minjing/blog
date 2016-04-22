@@ -68,9 +68,12 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repository: git@github.com:minjing/minjing.github.io.git
   branch: master
+- type: git
+  repository: git@git.coding.net:minjing/minjing.git
+  branch: coding-pages
 
 avatar: /images/avatar.png
 
