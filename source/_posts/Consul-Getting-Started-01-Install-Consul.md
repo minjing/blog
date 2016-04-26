@@ -5,6 +5,7 @@ tags:
   - MicroService
 categories:
   - Development
+date: 2016-04-24 15:18:50
 ---
 
 Consul必须首先安装在每个节点上当该节点需要称为Consul集群中的成员。为了使得安装更容易，Consul为所有支持的平台提供了二进制安装包。本页面不描述如何从源码来编译Consul。
