@@ -68,4 +68,33 @@ Armons-MacBook-Air  172.20.20.11:8301  alive   server  0.6.1dev  2         dc1
 ```
 该命令输出显示你自己的节点，运行的地址，它的健康状态，它在集群中的角色，以及一些版本信息。另外元数据可以通过 *-detailed* 选项来查看。
 
-*members* 命令选项的输出是基于 [gossip协议](https://www.consul.io/docs/internals/gossip.html) 的。也就是说，在任何时候
+*members* 命令选项的输出是基于 [gossip协议](https://www.consul.io/docs/internals/gossip.html) 的并且其内容是最终一致。也就是说，在任何时候，你在本地代理看到的内容也许与当前服务器中的状态并不是绝对一致的。如果需要强一致性的状态信息，使用[HTTP API](https://www.consul.io/docs/agent/http.html)向Consul服务器发送请求：
+```bash
+$ curl localhost:8500/v1/catalog/nodes
+[{"Node":"Armons-MacBook-Air","Address":"172.20.20.11","CreateIndex":3,"ModifyIndex":4}]
+```
+另外对于HTTP API，[DNS接口](https://www.consul.io/docs/agent/dns.html)也常被用来查询节点信息。注意你必须确信你的DNS能够找到Consul代理的DNS服务器，Consul代理的DNS服务器默认运行在8600端口。有关DNS实体（类似于"Armons-MacBook-Air.node.consul"）将在后面有更详细的介绍。
+```bash
+$ dig @127.0.0.1 -p 8600 Armons-MacBook-Air.node.consul
+...
+
+;; QUESTION SECTION:
+;Armons-MacBook-Air.node.consul.    IN  A
+
+;; ANSWER SECTION:
+Armons-MacBook-Air.node.consul. 0 IN    A   172.20.20.11
+```
+
+## 停止代理
+
+你能够使用 *Ctrl-C* （中断信号）来优雅地停止代理。停止代理后，你可以看到它脱离集群并且关闭的信息。
+
+为了优雅地离开集群，Consul会通知其他的集群成员自己已经脱离了。如果你强制杀死代理的进程，那么其他的集群成员需要侦测节点是否失效。当一个成员离开，它的服务以及（checks）将从目录中移除。当一个成员失效，它的健康会简单地标记为critical，但它并不会被从目录中移除。Consul将自动尝试重新连接到失效的节点，并允许它在某些网络状况下恢复。
+
+另外，如果一个代理以服务器模式启动，优雅地离开是非常重要的，因为这可以避免潜在的可用性问题，有关[一致性协议](https://www.consul.io/docs/internals/consensus.html)，查看[指南](https://www.consul.io/docs/guides/)来获取更详细的关于如何安全的增加和移除服务器的信息。
+
+## 下一步
+
+一个简单的Consul集群已经启动了，让我们获取一些[服务]()吧！
+
+翻译自[这里](https://www.consul.io/intro/getting-started/agent.html)

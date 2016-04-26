@@ -52,6 +52,6 @@ Available commands are:
 如果终端报告*consul*没有被找到的错误，那可能是你的*PATH*没有被正确的设置导致的。请会到前面的步骤去检查你的*PATH*环境变量是否包含了安装Consul目录。
 
 ## 下一步
-Consul已经安装完成，让我们来启动代理!
+Consul已经安装完成，让我们来[启动代理]()!
 
 翻译自[这里](https://www.consul.io/intro/getting-started/install.html)
