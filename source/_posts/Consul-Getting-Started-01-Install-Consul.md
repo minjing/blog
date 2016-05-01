@@ -1,5 +1,5 @@
 ---
-title: 安装Consul
+title: Consul入门01 － 安装Consul
 tags:
   - Consul
   - MicroService
