@@ -1,8 +1,9 @@
 ---
-title: Electron 快速入门
+title: Electron指南 - 快速入门
 tags:
   - Electron
   - NodeJs
+  - JavaScript
 categories:
   - Development
 date: 2016-05-26 21:09:00
