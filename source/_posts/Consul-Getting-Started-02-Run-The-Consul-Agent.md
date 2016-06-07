@@ -96,6 +96,6 @@ Armons-MacBook-Air.node.consul. 0 IN    A   172.20.20.11
 
 ## 下一步
 
-一个简单的Consul集群已经启动了，让我们获取一些[服务]()吧！
+一个简单的Consul集群已经启动了，让我们获取一些[服务](/2016/04/26/Consul-Getting-Started-03-Services/)吧！
 
 翻译自[这里](https://www.consul.io/intro/getting-started/agent.html)

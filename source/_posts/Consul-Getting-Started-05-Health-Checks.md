@@ -71,6 +71,6 @@ dig @127.0.0.1 -p 8600 web.service.consul
 
 在本篇教程中，你学会了增加健康检测是非常容易。通过更新配置文件并且发送一个 *SIGHUP* 信号给代理来更新检测定义。还可以选择使用HTTP API来动态地增加，删除，以及修改检测。该API也可以用于一个"dead man's switch"，一个[TTL-based check](https://www.consul.io/docs/agent/checks.html#TTL)。TTL检测可以被用于一个应用程序和Consul是紧密集成的，使得业务逻辑评估是基于健康检测的一部分。
 
-接下来，我们将浏览[Consul的键／值存储]()。
+接下来，我们将浏览[Consul的键／值存储](/2016/05/01/Consul-Getting-Started-06-KeyValue-Data/)。
 
 翻译自[这里](https://www.consul.io/intro/getting-started/checks.html)

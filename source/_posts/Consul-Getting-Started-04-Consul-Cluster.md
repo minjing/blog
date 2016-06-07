@@ -123,6 +123,6 @@ agent-two.node.consul.  0 IN    A   172.20.20.11
 
 ## 下一步
 
-现在有了一个多节点的Consul集群已经启动并且运行着。让我们通过[健康检测]()使我们的服务具有更强的鲁棒性。
+现在有了一个多节点的Consul集群已经启动并且运行着。让我们通过[健康检测](/2016/05/01/Consul-Getting-Started-05-Health-Checks/)使我们的服务具有更强的鲁棒性。
 
 翻译自[这里](https://www.consul.io/intro/getting-started/join.html)

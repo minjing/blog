@@ -91,6 +91,6 @@ $ curl "http://localhost:8500/v1/kv/web/key2?index=101&wait=5s"
 ## 下一步
 这里的例子仅仅展示了部分的API使用。如果需要完整的文档，请查询[the /kv/ route of the HTTP API](https://www.consul.io/docs/agent/http/kv.html)。
 
-下一步，我们将看看Consul支持的[web界面]()中的选项
+下一步，我们将看看Consul支持的[web界面](/2016/05/09/Consul-Getting-Started-07-Consul-Web-Ui/)中的选项
 
 翻译自[这里](https://www.consul.io/intro/getting-started/kv.html)

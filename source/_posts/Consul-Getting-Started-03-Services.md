@@ -115,6 +115,6 @@ $ curl 'http://localhost:8500/v1/health/service/web?passing'
 
 ## 下一步
 
-我们现在配置了一个单代理，并且注册了一个服务。进展非常不错，但是下一步我们会展示Consul里最有价值的特性，[设置我们第一个集群]()!
+我们现在配置了一个单代理，并且注册了一个服务。进展非常不错，但是下一步我们会展示Consul里最有价值的特性，[设置我们第一个集群](/2016/05/01/Consul-Getting-Started-04-Consul-Cluster/)!
 
 翻译自[这里](https://www.consul.io/intro/getting-started/services.html)
